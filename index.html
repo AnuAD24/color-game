@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)file:///C:/Users/user/Desktop/DOMjavascript/arrow.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: blue;">
+      <div id="container">
+        <div id="top">
+            <span id="arrow1" class="animation"></span>
+            <button id="btn1">RED</button>
+        </div>
+        <div id="middle">
+            <span id="arrow2" class="animation"></span>
+            <button id="btn2">BLUE</button>
+        </div>
+        <div id="bottom">
+            <span id="arrow3" class="animation"></span>
+            <button id="btn3">YELLOW</button>
+        </div>
+    </div>
+
+    <script>
+        let btn1=document.getElementById("btn1")
+    let btn2=document.getElementById("btn2")
+    let btn3=document.getElementById("btn3")
+    
+    btn1.addEventListener('click',()=>{
+        let arrow1=document.getElementById("arrow1")
+        arrow1.classList.add('animation')
+        setTimeout(()=>{
+            document.body.style.backgroundColor="red"
+        },2000)
+    })
+    
+    btn2.addEventListener('click',()=>{
+        let arrow2=document.getElementById("arrow2")
+        arrow2.classList.add('animation')
+        setTimeout(()=>{
+            document.body.style.backgroundColor="blue"
+        },2000)
+    })
+    
+    btn3.addEventListener('click',()=>{
+        let arrow3=document.getElementById("arrow3")
+        arrow3.classList.add('animation')
+        setTimeout(()=>{
+            document.body.style.backgroundColor="yellow"
+        },2000)
+    })
+    
+    
+    </script>
+
+
+<style>
+    body{
+    padding: 0px;
+    background-color: aqua;
+    
+}
+#container
+{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+#top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    border-radius: 50px;
+    overflow: hidden;
+}
+#middle{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 50px;
+
+}
+#bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 50px; 
+}
+#arrow1{
+    /* position: relative; */
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    height: 40px;
+    width: 40px;
+    transform: rotate(45deg);
+}
+#arrow2{
+    position: relative;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    height: 40px;
+    width: 40px;
+    transform: rotate(45deg);
+}
+#arrow3{
+    position: relative;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    height: 40px;
+    width: 40px;
+    transform: rotate(45deg);
+}
+
+button{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+#btn1{
+    background-color: red;
+    columns: white;
+    font-weight: 700;
+    }
+
+#btn2{
+    background-color:blue;
+    columns: white;
+    font-weight: 700;
+    }
+
+#btn3{
+    background-color:yellow;
+    columns: white;
+    font-weight: 700;
+    }
+
+#expand{
+    width: 0px;
+}    
+
+.animation{
+    animation: arrow 2s;
+}
+@keyframes arrow{
+    0%{
+        right: 0px;
+    }
+    100%{
+        right: -1370px;
+    }
+}
+</style>
+   
+
+    
+
+</body></html>
