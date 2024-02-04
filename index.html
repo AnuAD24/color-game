@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<!-- saved from url=(0054)file:///C:/Users/user/Desktop/DOMjavascript/arrow.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-color: blue;">
+<body>
       <div id="container">
         <div id="top">
-            <span id="arrow1" class="animation"></span>
+            <span id="arrow1"></span>
             <button id="btn1">RED</button>
         </div>
         <div id="middle">
-            <span id="arrow2" class="animation"></span>
+            <span id="arrow2"></span>
             <button id="btn2">BLUE</button>
         </div>
         <div id="bottom">
-            <span id="arrow3" class="animation"></span>
+            <span id="arrow3"></span>
             <button id="btn3">YELLOW</button>
         </div>
     </div>
@@ -72,10 +72,11 @@
 #top{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
+    justify-content: space-between;
     border-radius: 50px;
-    overflow: hidden;
+   
 }
 #middle{
     display: flex;
@@ -95,7 +96,7 @@
     border-radius: 50px; 
 }
 #arrow1{
-    /* position: relative; */
+    position: relative;
     border-top: 2px solid black;
     border-right: 2px solid black;
     height: 40px;
@@ -162,5 +163,5 @@ button{
    
 
     
-
-</body></html>
+</body>
+</html>
